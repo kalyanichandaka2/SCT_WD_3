@@ -1,0 +1,150 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    background:linear-gradient(
+        -45deg,
+        #ff6b6b,
+        #feca57,
+        #48dbfb,
+        #1dd1a1
+    );
+    background-size:400% 400%;
+    animation:gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+.container{
+    background:rgba(255,255,255,0.95);
+    width:90%;
+    max-width:650px;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,0.25);
+    backdrop-filter:blur(10px);
+}
+
+.progress-container{
+    width:100%;
+    height:10px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+    margin-bottom:20px;
+}
+
+#progress-bar{
+    height:100%;
+    width:0%;
+    background:#4CAF50;
+    transition:0.4s;
+}
+
+#counter{
+    margin:15px 0;
+    font-size:18px;
+}
+
+.timer{
+    color:#ff3b3b;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+#question{
+    margin:20px 0;
+    font-size:32px;
+    color:#000;
+}
+
+#options{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin:20px 0;
+}
+
+/* IMPORTANT */
+.option{
+    width:100%;
+    padding:15px;
+    background:white;
+    color:black;
+    border:2px solid #48dbfb;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+
+.option:hover{
+    background:#48dbfb;
+    color:white;
+    transform:translateY(-3px);
+    box-shadow:0 5px 15px rgba(72,219,251,0.4);
+}
+
+.correct{
+    background:#4CAF50 !important;
+    color:white !important;
+    border-color:#4CAF50 !important;
+}
+
+.wrong{
+    background:#f44336 !important;
+    color:white !important;
+    border-color:#f44336 !important;
+}
+
+button{
+    background:#667eea;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#5563d6;
+}
+
+#next-btn{
+    margin-top:15px;
+}
+
+#score{
+    margin-top:20px;
+    font-size:24px;
+    color:#333;
+}
+
+.quote{
+    margin-top:15px;
+    font-style:italic;
+    color:#666;
+    font-size:16px;
+}
